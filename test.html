@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="wrap">
+    <h1 class="title">My Website Portfolio</h1>
+    <p class="subtitle">A few sites I’ve designed and built.</p>
+
+    <!-- WEBSITE 1 -->
+    <div class="site">
+      <h2 class="site__name">Website Name 1</h2>
+
+      <div class="site__images">
+        <img src="images/site1-1.jpg" alt="Website Name 1 screenshot 1" loading="lazy">
+        <img src="images/site1-2.jpg" alt="Website Name 1 screenshot 2" loading="lazy">
+        <img src="images/site1-3.jpg" alt="Website Name 1 screenshot 3" loading="lazy">
+      </div>
+
+      <p class="site__case">
+        Short case study paragraph: what the client needed, what you did, and the outcome.
+        Example: “Redesigned the layout for clarity, improved mobile navigation, and rebuilt key
+        pages for faster loading and better conversions.”
+      </p>
+    </div>
+
+    <!-- WEBSITE 2 -->
+    <div class="site">
+      <h2 class="site__name">Website Name 2</h2>
+
+      <div class="site__images">
+        <img src="images/site2-1.jpg" alt="Website Name 2 screenshot 1" loading="lazy">
+        <img src="images/site2-2.jpg" alt="Website Name 2 screenshot 2" loading="lazy">
+      </div>
+
+      <p class="site__case">
+        One paragraph case study: goal → your approach → result.
+      </p>
+    </div>
+
+    <!-- Add more .site blocks as needed -->
+  </main>
+
+
+<style>
+  
+* { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #0b0c10;
+  color: rgba(255,255,255,.92);
+}
+
+.wrap{
+  width: min(980px, calc(100% - 32px));
+  margin: 40px auto;
+}
+
+.title{
+  margin: 0 0 6px;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle{
+  margin: 0 0 24px;
+  color: rgba(255,255,255,.70);
+  line-height: 1.5;
+}
+
+.site{
+  padding: 18px;
+  margin: 0 0 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  background: rgba(255,255,255,.04);
+}
+
+.site__name{
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+}
+
+.site__images{
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x mandatory;
+}
+
+.site__images img{
+  width: 280px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.06);
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.site__case{
+  margin: 12px 0 0;
+  color: rgba(255,255,255,.75);
+  line-height: 1.6;
+  max-width: 75ch;
+}
+
+/* Mobile tweaks */
+@media (max-width: 520px){
+  .site__images img{
+    width: 240px;
+    height: 150px;
+  }
+}
+
+
+  
+</style>
+</body>
+</html>
